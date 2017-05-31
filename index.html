@@ -1,0 +1,29 @@
+<html ng-app="GeoTag">
+  <head>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app/css/main.css">
+  </head>
+      <nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavigationController">
+          <div class="container">
+              <div>
+                  <input type="email" ng-model="login.email">
+                  <input type="password" ng-model="login.password">
+                  <button ng-click="loginUser()">Login</button>
+                  <a ui-sref="signUp">Create An Account</a>
+              </div>
+          </div>
+      </nav>
+
+  <body>
+
+      
+      <div ui-view></div>
+
+  </body>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/signup/signup-controller.js"></script>
+  <script src="app/navigation/navigation-controller.js"></script>
+</html>
